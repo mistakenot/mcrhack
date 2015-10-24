@@ -203,6 +203,7 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\creative.css" />
+    <Content Include="Content\img\header.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -245,6 +246,7 @@
   <ItemGroup>
     <Folder Include="Content\font-awesome\" />
     <Folder Include="Content\fonts\" />
+    <Folder Include="Content\img\portfolio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
