@@ -28,7 +28,7 @@ namespace BookByText.Controllers
             var next = bookService.GetNext(number);
             smsService.Send(number, next);
 
-            return Redirect("");
+            return Redirect("/");
         }
     }
 }

@@ -72,50 +72,13 @@
                         <option value="@item.Key">@item.Value</option>
                     }
                     </select>
-
-                    <!--
-                    <ul name="Title">
-                        @foreach (var item in MvcApplication.BookService.GetTitles())
-                        {
-                            <li>@item.Value</li>
-                        }
-                    </ul>
-                        
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Choose book <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            @foreach (var item in MvcApplication.BookService.GetTitles())
-                            {
-                                <li><a href="#">@item.Value</a></li>
-                            }
-                        </ul>
-                    </div>
-                    -->
-
+                    <br />
                     <label for="Number">Your number</label>
                     <input type="text" name="Number" value=""/>
 
                     <input type="submit">
                 </form>
-
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Choose book <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Book 1 Name</a></li>
-                        <li><a href="#">Book 2 Name</a></li>
-                        <li><a href="#">Book 3 Name</a></li>
-                    </ul>
-                </div>
             </div>
-            </br>
-            <h3>Enter phone number</h3><input type="tel">
-            <br>
-            <input type="submit">
         </div>
     </header>
     <!-- jQuery -->
