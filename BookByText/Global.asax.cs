@@ -7,7 +7,7 @@ namespace BookByText
     public class MvcApplication : System.Web.HttpApplication
     {
         public static readonly IBookService BookService = new BookService();
-        public static readonly ISmsService SmsService;
+        public static readonly ISmsService SmsService = new SmsService();
         
         protected void Application_Start()
         {

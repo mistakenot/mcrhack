@@ -9,11 +9,13 @@ namespace BookByText.Controllers
 {
     public class IndexController : Controller
     {
-        private readonly IBookService service;
+        private readonly IBookService bookService;
+        private readonly ISmsService smsService;
 
         public IndexController()
         {
-
+            bookService = MvcApplication.BookService;
+            smsService = MvcApplication.SmsService;
         }
 
         // GET: Index
@@ -26,7 +28,9 @@ namespace BookByText.Controllers
         {
             if (ModelState.IsValid)
             {
-                service.CreateSubscription(model.Number, model.BookId);
+                bookService.CreateSubscription(model.Number, model.BookId);
+                var text = bookService.GetNext(model.Number.ToString());
+                smsService.Send(model.Number.ToString(), text);
             }
         }
     }

@@ -96,6 +96,10 @@ namespace BookByText
 
             return new string(buffer);
         }
+        public IEnumerable<KeyValuePair<int, string>> GetTitles()
+        {
+            return index.ToList();
+        }
 
         private FileStream GetStream(int bookId)
         {

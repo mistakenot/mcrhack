@@ -9,9 +9,8 @@ namespace BookByText
     public interface IBookService
     {
         void CreateSubscription(string mobileNumber, int bookId);
-
         string GetNext(string mobileNumber);
-
         string GetPrevious(string mobileNumber);
+        IEnumerable<KeyValuePair<int, string>> GetTitles();
     }
 }
