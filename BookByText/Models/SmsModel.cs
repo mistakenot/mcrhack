@@ -9,9 +9,9 @@ namespace BookByText.Models
     public class SmsModel
     {
         [Required]
-        public int to { get; set; }
+        public long to { get; set; }
         [Required]
-        public int from { get; set; }
+        public long from { get; set; }
         [Required]
         public string content { get; set; }
     }

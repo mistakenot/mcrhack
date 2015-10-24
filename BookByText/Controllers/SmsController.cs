@@ -5,10 +5,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace BookByText.Controllers
 {
-    public class SmsController : ApiController
+    public class SmsController : Controller
     {
         private readonly IBookService bookService;
         private readonly ISmsService smsService;
@@ -19,16 +20,14 @@ namespace BookByText.Controllers
             smsService = MvcApplication.SmsService;
         }
 
-        [HttpGet]
-        [Route("sms")]
-        public IHttpActionResult Get()
+        public ActionResult Receive()
         {
-            return Ok("Working.");
-        }
-
-        public IHttpActionResult Post()
-        {
-            SmsModel model = null;
+            SmsModel model = new SmsModel()
+            {
+                content = Request["content"],
+                from = long.Parse(Request["from"]),
+                to = long.Parse(Request["to"])
+            };
             var command = model.content.ToLower().Trim();
             var text = "";
 
@@ -37,13 +36,13 @@ namespace BookByText.Controllers
                 case "next":
                     text = bookService.GetNext(model.from.ToString());
                     smsService.Send(model.from.ToString(), text);
-                    return Ok();
+                    return Json(new object());
                 case "previous":
                     text = bookService.GetPrevious(model.from.ToString());
                     smsService.Send(model.from.ToString(), text);
-                    return Ok();
+                    return Json(new object());
                 default:
-                    return BadRequest();
+                    throw new Exception("Invalid message.");
             }
         }
     }
