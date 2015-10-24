@@ -19,6 +19,11 @@ namespace BookByText.Controllers
             smsService = MvcApplication.SmsService;
         }
 
+        public IHttpActionResult Get()
+        {
+            return Ok("Working.");
+        }
+
         public IHttpActionResult Post([FromUri]SmsModel model)
         {
             var command = model.content.ToLower().Trim();
