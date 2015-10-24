@@ -198,9 +198,18 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Taleoftwocities.txt">
+    <Content Include="App_Data\A Christmas Carol - Charles Dickens.txt" />
+    <Content Include="App_Data\Alice In Wonderland - Lewis Carol.txt" />
+    <Content Include="App_Data\Great Expectations - Charles Dickens.txt" />
+    <Content Include="App_Data\A Message From The Sea - Charles Dickens.txt" />
+    <Content Include="App_Data\Oliver Twist - Charles Dickens.txt" />
+    <Content Include="App_Data\Pride and Prejudice - Jane Austen.txt" />
+    <Content Include="App_Data\Sense and Sensibility - Jane Austen.txt" />
+    <Content Include="App_Data\Tale of Two Cities - Charles Dickens.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\The Life and Adventures of Robinson Crusoe - Daniel Defoe.txt" />
+    <Content Include="App_Data\Treasure Island - Robert Lewis Stevenson.txt" />
     <Content Include="Content\css\animate.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
@@ -215,6 +224,8 @@
     <Content Include="App_Data\index.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\hackmcr %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\hackmcr %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />

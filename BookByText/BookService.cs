@@ -89,7 +89,7 @@ namespace BookByText
             using (var reader = new StreamReader(stream))
             {
                 stream.Seek(sub.Index, SeekOrigin.Begin);
-                reader.ReadBlock(buffer, sub.Index, PAGE_SIZE);
+                reader.ReadBlock(buffer, 0, PAGE_SIZE);
             }
 
             sub.Index += PAGE_SIZE;
