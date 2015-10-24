@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Read books</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>Read books on phone</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="~/Content/css/bootstrap.min.css" type="text/css">
@@ -39,14 +39,9 @@
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Read book on phone</a>
+            
+                
+                <a class="navbar-brand page-scroll" href="#page-top">Read books on phone</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,28 +54,33 @@
     <header style="background-image: url(Content/img/header.jpg)">
         <div class="header-content">
             <div class="header-content-inner">
-                <h2>
+                <h1>
                     Choose a book you want to read
-                </h2>
+                </h1>
 
                 <form method="post" action="Subscription/Create">
-                    <label for="Book">Book Title</label>
+                    <label for="Book"><h3>Book Title</h3></label>
 
-                    <select name="Book">
+                   <select name="Book">
                     @foreach (var item in MvcApplication.BookService.GetTitles())
                     {
                         <option value="@item.Key">@item.Value</option>
                     }
                     </select>
                     <br />
-                    <label for="Number">Your number</label>
+                    <label for="Number"><h3>Your number</h3></label>
                     <input type="text" name="Number" value=""/>
-
+                    
                     <input type="submit">
                 </form>
             </div>
+            
+            <h4>  Hack Manchester<br> Created by Team R2D2</h4>
+           
         </div>
+        
     </header>
+
     <!-- jQuery -->
     <script src="~/Scripts/jquery.js"></script>
 
@@ -94,7 +94,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="~/Scripts/creative.js"></script>
-
+    
 </body>
 
 </html>
