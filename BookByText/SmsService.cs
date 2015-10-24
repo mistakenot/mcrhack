@@ -18,15 +18,9 @@ namespace BookByText
                         Message = body
                     });
 
-                if (result.Success)
+                if (!result.Success)
                 {
-                    Console.WriteLine("SMS Sent to { 0}, Clockwork ID: { 1}",
-                               result.SMS.To, result.ID);
-                }
-                else
-                {
-                    Console.WriteLine("SMS to { 0} failed, Clockwork Error: { 1} { 2}",
-                          result.SMS.To, result.ErrorCode, result.ErrorMessage);
+                    throw new Exception(result.ErrorMessage);
                 }
             }
             catch (APIException ex)

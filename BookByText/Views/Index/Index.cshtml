@@ -61,13 +61,46 @@
             <div class="header-content-inner">
                 <h2>
                     Choose a book you want to read
-
-
-
                 </h2>
 
-                <hr>
-                <!-- Single button -->
+                <form method="post" action="Subscription/Create">
+                    <label for="Book">Book Title</label>
+
+                    <select name="Book">
+                    @foreach (var item in MvcApplication.BookService.GetTitles())
+                    {
+                        <option value="@item.Key">@item.Value</option>
+                    }
+                    </select>
+
+                    <!--
+                    <ul name="Title">
+                        @foreach (var item in MvcApplication.BookService.GetTitles())
+                        {
+                            <li>@item.Value</li>
+                        }
+                    </ul>
+                        
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose book <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            @foreach (var item in MvcApplication.BookService.GetTitles())
+                            {
+                                <li><a href="#">@item.Value</a></li>
+                            }
+                        </ul>
+                    </div>
+                    -->
+
+                    <label for="Number">Your number</label>
+                    <input type="text" name="Number" value=""/>
+
+                    <input type="submit">
+                </form>
+
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Choose book <span class="caret"></span>
@@ -76,7 +109,6 @@
                         <li><a href="#">Book 1 Name</a></li>
                         <li><a href="#">Book 2 Name</a></li>
                         <li><a href="#">Book 3 Name</a></li>
-
                     </ul>
                 </div>
             </div>

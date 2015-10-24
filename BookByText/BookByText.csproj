@@ -185,6 +185,7 @@
     <Compile Include="BookService.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\SmsController.cs" />
+    <Compile Include="Controllers\SubscriptionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

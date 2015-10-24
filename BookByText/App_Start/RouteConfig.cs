@@ -19,11 +19,13 @@ namespace BookByText
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Index", action = "Index", id = UrlParameter.Optional }
             );
-
+            
             routes.MapHttpRoute(
                 name: "Api",
-                routeTemplate: "{controller}/{action}/{id}"
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = UrlParameter.Optional }
             );
+            
         }
     }
 }
