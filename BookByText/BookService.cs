@@ -9,7 +9,7 @@ namespace BookByText
 {
     public class BookService : IBookService
     {
-        public const int PAGE_SIZE = 160;
+        public const int PAGE_SIZE = 150;
         public const int NUMBER_OF_PAGES = 3;
         public static readonly string RootDir = AppDomain.CurrentDomain.GetData("DataDirectory").ToString();
 
@@ -61,7 +61,7 @@ namespace BookByText
             using (var reader = new StreamReader(stream))
             {
                 stream.Seek(sub.Index, SeekOrigin.Begin);
-                reader.ReadBlock(buffer, sub.Index, PAGE_SIZE);
+                reader.ReadBlock(buffer, 0, PAGE_SIZE);
             }
 
             sub.Index += PAGE_SIZE;
