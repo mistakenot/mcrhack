@@ -22,8 +22,7 @@
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css" type="text/css">
-
+   
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="~/Content/css/animate.min.css" type="text/css">
 
@@ -44,8 +43,9 @@
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            
-                
+            <div class="navbar-header">
+             
+            </div>
                 <a class="navbar-brand page-scroll" href="#page-top">Read books on phone</a>
             </div>
 
@@ -64,6 +64,14 @@
                 </h1>
 
                 <form method="post" action="Subscription/Create">
+
+                    <label for="Search"><h3>Search for a book</h3></label>
+                    <input type="text" name="Search" value="" />
+
+                    <input type="submit" value="Search">
+
+                    <br>
+
                     <label for="Book"><h3>Book Title</h3></label>
 
                     @Html.Partial("~/Views/Search/Index.cshtml", EMPTY)
@@ -71,10 +79,14 @@
                     <div id="searchResults"></div>
 
                     <br />
+                    
+
+
+                    <br />
                     <label for="Number"><h3>Your number</h3></label>
                     <input type="text" name="Number" value=""/>
                     
-                    <input type="submit">
+                    <input type="submit" >
                 </form>
             </div>
             
