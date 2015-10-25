@@ -184,6 +184,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BookService.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SmsController.cs" />
     <Compile Include="Controllers\SubscriptionController.cs" />
     <Compile Include="Global.asax.cs">
@@ -191,6 +192,7 @@
     </Compile>
     <Compile Include="IBookService.cs" />
     <Compile Include="ISmsService.cs" />
+    <Compile Include="Models\BookModel.cs" />
     <Compile Include="Models\SmsModel.cs" />
     <Compile Include="Models\SubscriptionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +228,7 @@
     </Content>
     <None Include="Properties\PublishProfiles\hackmcr %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\hackmcr %284%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />
@@ -255,6 +258,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Index\Index.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\font-awesome\" />

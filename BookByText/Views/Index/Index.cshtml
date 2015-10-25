@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using BookByText.Models
+@{
+    var EMPTY = new BookModel[0];
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -61,12 +66,10 @@
                 <form method="post" action="Subscription/Create">
                     <label for="Book"><h3>Book Title</h3></label>
 
-                   <select name="Book">
-                    @foreach (var item in MvcApplication.BookService.GetTitles())
-                    {
-                        <option value="@item.Key">@item.Value</option>
-                    }
-                    </select>
+                    @Html.Partial("~/Views/Search/Index.cshtml", EMPTY)
+
+                    <div id="searchResults"></div>
+
                     <br />
                     <label for="Number"><h3>Your number</h3></label>
                     <input type="text" name="Number" value=""/>
@@ -94,6 +97,16 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="~/Scripts/creative.js"></script>
+
+    <script>
+        // Search
+        function search() {
+            var url = "/search?query=" + "val";
+            $.get(url).done(function (response) {
+                $("#searchResults").html(response);
+            });
+        }
+    </script>
     
 </body>
 

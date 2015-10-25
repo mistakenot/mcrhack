@@ -1,0 +1,9 @@
+﻿@model IEnumerable<BookByText.Models.BookModel>
+
+<select name="Book">
+    @foreach (var item in Model)
+    {
+        <option value="@item.Id">@item.Name</option>
+    }
+</select>
+

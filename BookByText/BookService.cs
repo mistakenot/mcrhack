@@ -25,6 +25,18 @@ namespace BookByText
             this.index = JsonConvert.DeserializeObject<Dictionary<int, string>>(file);
         }
 
+        public IEnumerable<KeyValuePair<int, string>> Search(string query)
+        {
+            var keywords = query
+                .Split(' ')
+                .Select(q => q.ToLower().Trim());
+
+            var result = keywords
+                .SelectMany(k => index.Where(i => i.Value.ToLower().Contains(k)))
+                .Distinct();
+
+            return result;
+        }
         public void CreateSubscription(string mobileNumber, int bookId)
         {
             // Remove any pre-existing subscriptions
