@@ -89,22 +89,21 @@ namespace BookByText
                 throw new ArgumentException("Subscription not found for mobile number: " + mobileNumber);
             }
 
-            if(sub.Index < PAGE_SIZE)
+            if(sub.Index < (PAGE_SIZE*2))
             {
                 throw new IndexOutOfRangeException("Am at the beginning of the book. Can't go backwards.");
             }
 
             var buffer = new char[PAGE_SIZE];
-            sub.Index -= PAGE_SIZE;
 
             using (var stream = GetStream(sub.BookId))
             using (var reader = new StreamReader(stream))
             {
-                stream.Seek(sub.Index, SeekOrigin.Begin);
+                stream.Seek(sub.Index - (PAGE_SIZE*2), SeekOrigin.Begin);
                 reader.ReadBlock(buffer, 0, PAGE_SIZE);
             }
 
-            sub.Index += PAGE_SIZE;
+            sub.Index -= PAGE_SIZE;
 
             return new string(buffer);
         }

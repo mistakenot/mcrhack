@@ -63,30 +63,20 @@
                     Choose a book you want to read
                 </h1>
 
+                <h3>Search for a book or author</h3>
+                <input type="text" id="searchTerms" />
+                <button onclick="search()">Search</button>
+
                 <form method="post" action="Subscription/Create">
-
-                    <label for="Search"><h3>Search for a book</h3></label>
-                    <input type="text" name="Search" value="" />
-
-                    <input type="submit" value="Search">
-
-                    <br>
-
                     <label for="Book"><h3>Book Title</h3></label>
-
-                    @Html.Partial("~/Views/Search/Index.cshtml", EMPTY)
-
-                    <div id="searchResults"></div>
-
+                    <div id="searchResults">
+                        @Html.Partial("~/Views/Search/Index.cshtml", EMPTY)
+                    </div>
+                    <label for="Number"><h3>Submit</h3></label>
                     <br />
-                    
-
-
-                    <br />
-                    <label for="Number"><h3>Your number</h3></label>
                     <input type="text" name="Number" value=""/>
                     
-                    <input type="submit" >
+                    <input type="submit" value="Send">
                 </form>
             </div>
             
@@ -113,7 +103,7 @@
     <script>
         // Search
         function search() {
-            var url = "/search?query=" + "val";
+            var url = "/search?query=" + $("#searchTerms").val();
             $.get(url).done(function (response) {
                 $("#searchResults").html(response);
             });
