@@ -231,6 +231,10 @@
     <None Include="Properties\PublishProfiles\hackmcr %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr %284%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr %285%29.pubxml" />
+    <None Include="Properties\PublishProfiles\hackmcr %286%29.pubxml" />
+    <None Include="Properties\PublishProfiles\hackmcr %287%29.pubxml" />
+    <None Include="Properties\PublishProfiles\hackmcr %288%29.pubxml" />
+    <None Include="Properties\PublishProfiles\hackmcr %289%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />

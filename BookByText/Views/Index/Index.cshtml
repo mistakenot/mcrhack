@@ -39,23 +39,19 @@
 </head>
 
 <body id="page-top">
-
+    <!--
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
              
             </div>
                 <a class="navbar-brand page-scroll" href="#page-top">Text the Book</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
-
+    -->
     <header style="background-image: url(Content/img/background_5.jpg)">
         <div class="header-content" style="text-align: center;">
             <div class="header-content-inner">
@@ -73,10 +69,12 @@
                             <div id="searchResults">
                                 @Html.Partial("~/Views/Search/Index.cshtml", EMPTY)
                             </div>
-                            <label for="Number"><h3>Submit</h3></label>
+                            <label for="Number"><h3>Your Phone Number</h3></label>
                             <br />
-                            <input type="text" name="Number" value="" /> <p>(e.g. 447900112233)</p>
+                            <input type="text" name="Number" value="" /> 
+                            <p>(e.g. 447900112233)</p>
                             <input type="submit" value="Send">
+                            <p>Reply with "Next" to get the next page.</p>
                         </form>
                     </div>
                 </div>
