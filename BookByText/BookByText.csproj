@@ -216,6 +216,7 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\creative.css" />
+    <Content Include="Content\img\background_5.jpg" />
     <Content Include="Content\img\header.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -229,6 +230,7 @@
     <None Include="Properties\PublishProfiles\hackmcr %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\hackmcr %285%29.pubxml" />
     <None Include="Properties\PublishProfiles\hackmcr.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />

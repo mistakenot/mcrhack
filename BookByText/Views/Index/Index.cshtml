@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <title>Read books on phone</title>
+    <title>Text the Book</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="~/Content/css/bootstrap.min.css" type="text/css">
@@ -46,7 +46,7 @@
             <div class="navbar-header">
              
             </div>
-                <a class="navbar-brand page-scroll" href="#page-top">Read books on phone</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Text the Book</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,32 +56,32 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header style="background-image: url(Content/img/header.jpg)">
-        <div class="header-content">
+    <header style="background-image: url(Content/img/background_5.jpg)">
+        <div class="header-content" style="text-align: center;">
             <div class="header-content-inner">
                 <h1>
                     Choose a book you want to read
                 </h1>
+                <div class="row">
+                    <div class="col-md-4 col-lg-offset-4" style="background-color:black;">
+                        <h3>Search for a book or author</h3>
 
-                <h3>Search for a book or author</h3>
-                <input type="text" id="searchTerms" />
-                <button onclick="search()">Search</button>
-
-                <form method="post" action="Subscription/Create">
-                    <label for="Book"><h3>Book Title</h3></label>
-                    <div id="searchResults">
-                        @Html.Partial("~/Views/Search/Index.cshtml", EMPTY)
+                        <input type="text" id="searchTerms" />
+                        <button onclick="search()">Search</button>
+                        <form method="post" action="Subscription/Create">
+                            <label for="Book"><h3>Book Title</h3></label>
+                            <div id="searchResults">
+                                @Html.Partial("~/Views/Search/Index.cshtml", EMPTY)
+                            </div>
+                            <label for="Number"><h3>Submit</h3></label>
+                            <br />
+                            <input type="text" name="Number" value="" /> <p>(e.g. 447900112233)</p>
+                            <input type="submit" value="Send">
+                        </form>
                     </div>
-                    <label for="Number"><h3>Submit</h3></label>
-                    <br />
-                    <input type="text" name="Number" value=""/>
-                    
-                    <input type="submit" value="Send">
-                </form>
+                </div>
             </div>
-            
-            <h4>  Hack Manchester<br> Created by Team R2D2</h4>
-           
+            <h4>Hack Manchester<br>Created by Team R2D2</h4>
         </div>
         
     </header>
